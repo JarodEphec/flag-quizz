@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'poke.quizz',
-  appName: 'poke-quizz',
+  appId: 'flag.quizz',
+  appName: 'flag-quizz',
   webDir: 'dist',
   server: {
     androidScheme: 'https'
