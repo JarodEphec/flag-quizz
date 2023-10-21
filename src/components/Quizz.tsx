@@ -2,6 +2,8 @@ import { IonCol, IonGrid, IonRow, IonButton } from '@ionic/react';
 import React, { useState } from 'react';
 import myData from '../../curiexplore-pays.json';
 
+let proposition: (number)[] = [];
+let goodAnswer = 0;
 
 const Quizz: React.FC = () => {
 
@@ -12,9 +14,10 @@ const Quizz: React.FC = () => {
     function getPropositions() {
         return [getRandomInt(216), getRandomInt(216), getRandomInt(216), getRandomInt(216)];
     }
-
-    let proposition = getPropositions();
-    let goodAnswer = getRandomInt(4);
+    if (proposition.length === 0) {
+        proposition = getPropositions();
+        goodAnswer = getRandomInt(4);
+    }
 
     const [imgText, setImgText] = useState(myData[proposition[goodAnswer]].fields.flag);
     const changeImgText = (imgText: string) => setImgText(imgText);
@@ -38,8 +41,6 @@ const Quizz: React.FC = () => {
         console.log(answer);
         if (answer === goodAnswer) {
             goodAnswerButon?.setAttribute("color", "success");
-            proposition = getPropositions();
-            goodAnswer = getRandomInt(4);
             setTimeout(() => {
                 refresher();
             }, 1000);
@@ -47,8 +48,6 @@ const Quizz: React.FC = () => {
         } else {
             buton?.setAttribute("color", "danger");
             goodAnswerButon?.setAttribute("color", "success");
-            proposition = getPropositions();
-            goodAnswer = getRandomInt(4);
             setTimeout(() => {
                 refresher();
             }, 1000);
@@ -59,9 +58,7 @@ const Quizz: React.FC = () => {
     function refresher() {
         proposition = getPropositions();
         goodAnswer = getRandomInt(4);
-        console.log(proposition);
-        console.log(goodAnswer);
-        console.log(myData[proposition[goodAnswer]].fields.name_fr);
+
         for (let i = 0; i < 4; i++) {
             let button = document.getElementById('buton' + i);
             if (button) {
