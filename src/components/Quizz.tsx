@@ -77,7 +77,7 @@ const Quizz: React.FC = () => {
         <div>
             <IonGrid>
                 <IonRow class="ion-justify-content-center">
-                    <IonCol size="auto"><img src={imgText} alt="Flag" /></IonCol>
+                    <IonCol size="auto"><img src={imgText} alt="Flag" className="tab2-img" /></IonCol>
                 </IonRow>
             </IonGrid>
             <br />

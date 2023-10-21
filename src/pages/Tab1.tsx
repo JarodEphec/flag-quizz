@@ -7,16 +7,17 @@ const Tab1: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
+          <IonTitle>Le quizz des drapeaux</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
+            <IonTitle size="large">Home</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 1 page" />
+        <h1>Bienvenue !</h1>
+        <img src="https://media.tenor.com/Vb3g5JF3MB4AAAAi/neco-arc-taunt.gif" alt="Neco-Arc" className="tab1-img" />
       </IonContent>
     </IonPage>
   );

@@ -11,7 +11,7 @@ const Tab2: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 2</IonTitle>
+          <IonTitle>Le quizz là</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -19,7 +19,7 @@ const Tab2: React.FC = () => {
         <Quizz></Quizz>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 2</IonTitle>
+            <IonTitle size="large">Le quizz là</IonTitle>
           </IonToolbar>
         </IonHeader>
       </IonContent>
